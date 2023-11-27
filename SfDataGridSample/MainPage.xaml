@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"              
+             x:Class="SfDataGridSample.MainPage">
+    
+    <ListView ItemTapped="ListView_ItemTapped" RowHeight="50"
+              SelectionMode="None" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <ListView.ItemsSource>
+            <x:Array Type="{x:Type x:String}">
+                <x:String>Employees DataGrid Page</x:String>
+                <x:String>OrderInfo Page</x:String>
+            </x:Array>
+        </ListView.ItemsSource>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding}" FontSize="18" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+   
+</ContentPage>
